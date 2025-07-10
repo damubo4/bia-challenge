@@ -1,0 +1,10 @@
+<header class="header">
+  <h1 class="title-header">Where in the world?</h1>
+  <button class="button-change-theme" (click)="themeColorService.toggleTheme()">
+    @if (themeColorService.isDarkTheme()) {
+    <i class="fa-regular fa-sun"></i>
+    Light Mode } @else {
+    <i class="fa-regular fa-moon"></i>
+    Dark Mode }
+  </button>
+</header>

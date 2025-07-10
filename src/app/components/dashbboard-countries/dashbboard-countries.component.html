@@ -1,1 +1,56 @@
-<p>dashbboard-countries works!</p>
+<div class="container">
+  <section>
+    <form class="inputs" [formGroup]="formFilters">
+      <div class="container-input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          matInput
+          class="input-name"
+          formControlName="name"
+          type="text"
+          placeholder="Search for a country..."
+        />
+      </div>
+      <!-- <mat-form-field class="input-region">
+        <mat-select formControlName="region" name="region" id="">
+          <mat-option value="">Filter by Region</mat-option>
+          <mat-option value="Africa">Africa</mat-option>
+          <mat-option value="Americas">America</mat-option>
+          <mat-option value="Asia">Asia</mat-option>
+          <mat-option value="Europe">Europe</mat-option>
+          <mat-option value="Oceania">Oceania</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      <button class="button-region" mat-button [matMenuTriggerFor]="menu">
+        <span>Filter by Region</span>
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+      <mat-menu class="menu" #menu="matMenu">
+        <button mat-menu-item>Africa</button>
+        <button mat-menu-item>Americas</button>
+        <button mat-menu-item>Asia</button>
+        <button mat-menu-item>Europe</button>
+        <button mat-menu-item>Oceania</button>
+      </mat-menu>
+    </form>
+  </section>
+  <section class="countries">
+    @for (country of countriesFiltered(); track $index) {
+    <div class="country">
+      <img src="{{ country.flags.png }}" alt="" />
+      <div class="information">
+        <h3>{{ country.name.common }}</h3>
+        <p>
+          Population: <span>{{ country.population | number }}</span>
+        </p>
+        <p>
+          Region: <span>{{ country.region }}</span>
+        </p>
+        <p>
+          Capital: <span>{{ country.capital }}</span>
+        </p>
+      </div>
+    </div>
+    }
+  </section>
+</div>

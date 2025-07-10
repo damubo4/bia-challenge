@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.country {
+  background-color: var(--card-background-color);
+}
+
+.country img {
+  width: 100%;
+  height: 180px;
+}
+
+.country h3 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.country p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.country span {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.information {
+  padding: 20px;
+}
+
+.input-name {
+  padding: 15px;
+  background-color: var(--card-background-color);
+  color: var(--primary-text-color);
+  border: none;
+  outline: none;
+}
+
+.input-name::placeholder {
+  color: var(--primary-text-color);
+}
+
+.container-input {
+  background-color: var(--card-background-color);
+  height: 45px;
+  padding: 0 30px;
+  width: 30%;
+}
+
+.mat-mdc-menu-item {
+  background-color: var(--card-background-color);
+  width: 200px;
+}
+
+.mat-mdc-menu-item:hover     {
+  background-color: var(--card-background-color);
+}
+
+.button-region {
+  background-color: var(--card-background-color);
+  color: var(--primary-text-color);
+  border: none;
+  outline: none;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}

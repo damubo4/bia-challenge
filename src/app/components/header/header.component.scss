@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-background-color);
+  height: 80px;
+  padding: 0 40px;
+}
+
+.title-header {
+  font-size: 20px;
+}
+
+.button-change-theme {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+
+.button-change-theme i {
+  font-size: 14px;
+  margin-right: 6px;
+}

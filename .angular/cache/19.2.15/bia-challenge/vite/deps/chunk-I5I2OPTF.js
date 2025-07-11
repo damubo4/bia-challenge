@@ -2,40 +2,38 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-} from "./chunk-TOYBUWDE.js";
+} from "./chunk-TAYNEJBZ.js";
 import {
-  MatRipple
-} from "./chunk-L6PG3DLT.js";
-import {
-  ESCAPE,
-  MatCommonModule,
-  _IdGenerator,
-  _getEventTarget,
   _isTestEnvironment,
-  coerceArray,
-  coerceCssPixelValue,
-  hasModifierKey
-} from "./chunk-ZYEQ2VLH.js";
-import {
-  _CdkPrivateStyleLoader,
-  _bindEventWithOptions
-} from "./chunk-RIIFTS2O.js";
+  coerceCssPixelValue
+} from "./chunk-MLLONTMF.js";
 import {
   supportsScrollBehavior
 } from "./chunk-2O4WY5GE.js";
 import {
-  Platform
-} from "./chunk-TPMIQII7.js";
+  ESCAPE,
+  _IdGenerator,
+  _getEventTarget,
+  coerceArray,
+  hasModifierKey
+} from "./chunk-SQW5ZDFX.js";
 import {
   BidiModule,
   Directionality
-} from "./chunk-CYC55BLX.js";
+} from "./chunk-JDTDKEKM.js";
+import {
+  _CdkPrivateStyleLoader,
+  _bindEventWithOptions
+} from "./chunk-73UUABKX.js";
+import {
+  Platform
+} from "./chunk-TASZW4FN.js";
 import {
   Location
-} from "./chunk-I22RL6ZL.js";
+} from "./chunk-ULJKLC5B.js";
 import {
   DOCUMENT
-} from "./chunk-GHERD6QM.js";
+} from "./chunk-SLZMMFEY.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -81,7 +79,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵgetInheritedFactory
-} from "./chunk-OVVSS3MF.js";
+} from "./chunk-A6MXQDG5.js";
 
 // node_modules/@angular/cdk/fesm2022/portal-directives-Bw5woq8I.mjs
 function throwNullPortalError() {
@@ -3443,30 +3441,6 @@ var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends Overl
   }], () => [], null);
 })();
 
-// node_modules/@angular/material/fesm2022/index-SYVYjXwK.mjs
-var MatRippleModule = class _MatRippleModule {
-  static ɵfac = function MatRippleModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MatRippleModule)();
-  };
-  static ɵmod = ɵɵdefineNgModule({
-    type: _MatRippleModule,
-    imports: [MatCommonModule, MatRipple],
-    exports: [MatRipple, MatCommonModule]
-  });
-  static ɵinj = ɵɵdefineInjector({
-    imports: [MatCommonModule, MatCommonModule]
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatRippleModule, [{
-    type: NgModule,
-    args: [{
-      imports: [MatCommonModule, MatRipple],
-      exports: [MatRipple, MatCommonModule]
-    }]
-  }], null, null);
-})();
-
 export {
   TemplatePortal,
   DomPortalOutlet,
@@ -3474,7 +3448,6 @@ export {
   Overlay,
   CdkOverlayOrigin,
   CdkConnectedOverlay,
-  OverlayModule,
-  MatRippleModule
+  OverlayModule
 };
-//# sourceMappingURL=chunk-BJOO3J3J.js.map
+//# sourceMappingURL=chunk-I5I2OPTF.js.map

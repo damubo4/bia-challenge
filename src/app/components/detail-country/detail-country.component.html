@@ -1,1 +1,61 @@
-<p>detail-country works!</p>
+<div class="container">
+  <section>
+    <button routerLink="all-countries" class="button-back">
+      <i class="fa-solid fa-arrow-left"></i><span>Back</span>
+    </button>
+  </section>
+  @for (country of country(); track $index) {
+  <div class="container-information">
+    <section class="flag">
+      <img src="{{ country?.flags.png }}" alt="{{ country?.flags.alt }}" />
+    </section>
+    <section class="information">
+      <h2 class="title-country">{{ country?.name.common }}</h2>
+      <div class="general-information">
+        <section>
+          <p>
+            Native Name:
+            <span>
+              {{ getFirstOfficialName() }}
+            </span>
+          </p>
+          <p>
+            Population: <span>{{ country?.population | number }}</span>
+          </p>
+          <p>
+            Region: <span>{{ country?.region }}</span>
+          </p>
+          <p>
+            Sub Region: <span>{{ country?.subregion }}</span>
+          </p>
+          <p>
+            Capital: <span>{{ country?.capital }}</span>
+          </p>
+        </section>
+        <section>
+          <p>
+            Top Level Domain: <span>{{ country?.tld }}</span>
+          </p>
+          <p>
+            Currencies: <span>{{ getCurrency() }}</span>
+          </p>
+          <p>
+            Languages: @for (language of country?.languages | keyvalue; track
+            $index) {
+            <span>{{ language.value }}, </span>
+            }
+          </p>
+        </section>
+      </div>
+      <div class="border-countries">
+        <p>Border Countries:</p>
+        <div class="buttons-border">
+          @for (border of country?.borders; track $index) {
+          <button class="button-border">{{ border | titlecase }}</button>
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+  }
+</div>

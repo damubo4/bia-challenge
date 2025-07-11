@@ -12,10 +12,20 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatMenuModule } from "@angular/material/menu";
+import { Router } from "@angular/router";
+import { MatIconModule } from "@angular/material/icon";
 
 @Component({
   selector: "app-dashbboard-countries",
-  imports: [CommonModule, ReactiveFormsModule, MatSlideToggleModule, MatInputModule, MatSelectModule, MatMenuModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    MatInputModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatIconModule,
+  ],
   templateUrl: "./dashbboard-countries.component.html",
   styleUrl: "./dashbboard-countries.component.scss",
 })
@@ -24,11 +34,11 @@ export class DashbboardCountriesComponent {
   countries = signal<any[]>([]);
   countriesFiltered = signal<any[]>([]);
   formFilters: FormGroup;
+  router = inject(Router);
 
   constructor(private fb: FormBuilder) {
     this.formFilters = this.fb.group({
       name: ["", Validators.required],
-      region: ["", Validators.required],
     });
   }
 
@@ -38,14 +48,6 @@ export class DashbboardCountriesComponent {
     this.formFilters.get("name")?.valueChanges.subscribe((name) => {
       this.filterCountries(name);
     });
-
-    this.formFilters.get("region")?.valueChanges.subscribe((region) => {
-      this.filterCountriesByRegion(region);
-    });
-
-    // this.countriesService.getDetailCountry("argentina").subscribe((country) => {
-    //   console.log(country);
-    // });
   }
 
   getAllCountries() {
@@ -67,5 +69,9 @@ export class DashbboardCountriesComponent {
     this.countriesFiltered.set(
       this.countries().filter((country) => country.region === region)
     );
+  }
+
+  countryDetail(country: string) {
+    this.router.navigate(["country", country]);
   }
 }

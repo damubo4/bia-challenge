@@ -5,6 +5,6 @@ import { DetailCountryComponent } from "./components/detail-country/detail-count
 export const routes: Routes = [
   { path: "", component: DashbboardCountriesComponent },
   { path: "all-countries", component: DashbboardCountriesComponent },
-  { path: "country/:id", component: DetailCountryComponent },
+  { path: "country/:name", component: DetailCountryComponent },
   { path: "**", redirectTo: "all-countries" },
 ];

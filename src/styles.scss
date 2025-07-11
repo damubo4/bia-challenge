@@ -8,19 +8,43 @@ html {
   --primary-text-color: hsl(200, 15%, 8%);
   --background-color: hsl(0, 0%, 98%);
   --card-background-color: hsl(0, 0%, 100%);
+
+  .mat-mdc-menu-panel {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4px;
+  }
+
+  .mat-mdc-menu-item {
+    padding: 0 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .mat-mdc-menu-item:hover:not([disabled]) {
+    background-color: hsl(0, 0%, 98%);
+    color: #ffffff;
+  }
 }
 
 body.dark-theme {
   --primary-text-color: hsl(0, 0%, 100%);
   --background-color: hsl(207, 26%, 17%);
   --card-background-color: hsl(209, 23%, 22%);
+
+  .mat-mdc-menu-panel {
+    background-color: hsl(209, 23%, 22%);
+  }
+
+  .mat-mdc-menu-item:hover:not([disabled]) {
+    background-color: hsl(207, 26%, 17%);
+    color: #ffffff;
+  }
 }
 
 body {
   font-family: "Nunito Sans", sans-serif;
   color: var(--primary-text-color);
   background-color: var(--background-color);
-  transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+  transition: color 0.5s ease, background-color 0.5s ease; /* Transición suave */
   margin: 0;
   padding: 0;
 }
@@ -33,5 +57,30 @@ span {
   color: var(--primary-text-color);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--card-background-color) !important;
+  border-bottom: none !important;
+}
+
+.mat-mdc-input-element::placeholder {
+  color: var(--primary-text-color) !important;
+  font-size: 14px;
+}
+
+.mat-mdc-form-field-text-prefix {
+  margin-right: 10px !important;
+}
+
+.mat-mdc-form-field {
+  width: 40% !important;
+}
+
+@media (max-width: 636px) {
+  .mat-mdc-form-field {
+    width: 100% !important;
+  }
+}

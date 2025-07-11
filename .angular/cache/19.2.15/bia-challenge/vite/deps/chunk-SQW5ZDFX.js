@@ -1,18 +1,18 @@
 import {
+  BidiModule
+} from "./chunk-JDTDKEKM.js";
+import {
   _CdkPrivateStyleLoader,
   _bindEventWithOptions
-} from "./chunk-RIIFTS2O.js";
+} from "./chunk-73UUABKX.js";
 import {
   Platform,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-TPMIQII7.js";
-import {
-  BidiModule
-} from "./chunk-CYC55BLX.js";
+} from "./chunk-TASZW4FN.js";
 import {
   DOCUMENT
-} from "./chunk-GHERD6QM.js";
+} from "./chunk-SLZMMFEY.js";
 import {
   APP_ID,
   BehaviorSubject,
@@ -62,7 +62,7 @@ import {
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-OVVSS3MF.js";
+} from "./chunk-A6MXQDG5.js";
 
 // node_modules/@angular/cdk/fesm2022/fake-event-detection-DWOdFTFz.mjs
 function isFakeMousedownFromScreenReader(event) {
@@ -3097,91 +3097,6 @@ var ConfigurableFocusTrapFactory = class _ConfigurableFocusTrapFactory {
   }], () => [], null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/test-environment-CT0XxPyp.mjs
-function _isTestEnvironment() {
-  return (
-    // @ts-ignore
-    typeof __karma__ !== "undefined" && !!__karma__ || // @ts-ignore
-    typeof jasmine !== "undefined" && !!jasmine || // @ts-ignore
-    typeof jest !== "undefined" && !!jest || // @ts-ignore
-    typeof Mocha !== "undefined" && !!Mocha
-  );
-}
-
-// node_modules/@angular/cdk/fesm2022/platform.mjs
-var PlatformModule = class _PlatformModule {
-  static ɵfac = function PlatformModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PlatformModule)();
-  };
-  static ɵmod = ɵɵdefineNgModule({
-    type: _PlatformModule
-  });
-  static ɵinj = ɵɵdefineInjector({});
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PlatformModule, [{
-    type: NgModule,
-    args: [{}]
-  }], null, null);
-})();
-var supportedInputTypes;
-var candidateInputTypes = [
-  // `color` must come first. Chrome 56 shows a warning if we change the type to `color` after
-  // first changing it to something else:
-  // The specified value "" does not conform to the required format.
-  // The format is "#rrggbb" where rr, gg, bb are two-digit hexadecimal numbers.
-  "color",
-  "button",
-  "checkbox",
-  "date",
-  "datetime-local",
-  "email",
-  "file",
-  "hidden",
-  "image",
-  "month",
-  "number",
-  "password",
-  "radio",
-  "range",
-  "reset",
-  "search",
-  "submit",
-  "tel",
-  "text",
-  "time",
-  "url",
-  "week"
-];
-function getSupportedInputTypes() {
-  if (supportedInputTypes) {
-    return supportedInputTypes;
-  }
-  if (typeof document !== "object" || !document) {
-    supportedInputTypes = new Set(candidateInputTypes);
-    return supportedInputTypes;
-  }
-  let featureTestInput = document.createElement("input");
-  supportedInputTypes = new Set(candidateInputTypes.filter((value) => {
-    featureTestInput.setAttribute("type", value);
-    return featureTestInput.type === value;
-  }));
-  return supportedInputTypes;
-}
-
-// node_modules/@angular/cdk/fesm2022/boolean-property-DaaVhX5A.mjs
-function coerceBooleanProperty(value) {
-  return value != null && `${value}` !== "false";
-}
-
-// node_modules/@angular/cdk/fesm2022/css-pixel-value-C_HEqLhI.mjs
-function coerceCssPixelValue(value) {
-  if (value == null) {
-    return "";
-  }
-  return typeof value === "string" ? value : `${value}px`;
-}
-
 // node_modules/@angular/material/fesm2022/common-module-WayjW0Pb.mjs
 var MATERIAL_SANITY_CHECKS = new InjectionToken("mat-sanity-checks", {
   providedIn: "root",
@@ -3237,10 +3152,6 @@ export {
   FocusKeyManager,
   addAriaReferencedId,
   removeAriaReferencedId,
-  _isTestEnvironment,
-  getSupportedInputTypes,
-  coerceBooleanProperty,
-  coerceCssPixelValue,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-ZYEQ2VLH.js.map
+//# sourceMappingURL=chunk-SQW5ZDFX.js.map

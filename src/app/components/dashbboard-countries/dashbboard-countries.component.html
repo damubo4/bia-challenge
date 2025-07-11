@@ -1,16 +1,17 @@
 <div class="container">
   <section>
     <form class="inputs" [formGroup]="formFilters">
-      <div class="container-input">
-        <i class="fa-solid fa-magnifying-glass"></i>
+      <mat-form-field>
+        <span matTextPrefix> <i class="fa-solid fa-magnifying-glass"></i></span>
+
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         <input
           matInput
-          class="input-name"
           formControlName="name"
           type="text"
           placeholder="Search for a country..."
         />
-      </div>
+      </mat-form-field>
       <!-- <mat-form-field class="input-region">
         <mat-select formControlName="region" name="region" id="">
           <mat-option value="">Filter by Region</mat-option>
@@ -25,19 +26,33 @@
         <span>Filter by Region</span>
         <i class="fa-solid fa-angle-down"></i>
       </button>
-      <mat-menu class="menu" #menu="matMenu">
-        <button mat-menu-item>Africa</button>
-        <button mat-menu-item>Americas</button>
-        <button mat-menu-item>Asia</button>
-        <button mat-menu-item>Europe</button>
-        <button mat-menu-item>Oceania</button>
+      <mat-menu #menu="matMenu">
+        <button (click)="filterCountriesByRegion('Africa')" mat-menu-item>
+          Africa
+        </button>
+        <button (click)="filterCountriesByRegion('Americas')" mat-menu-item>
+          Americas
+        </button>
+        <button (click)="filterCountriesByRegion('Asia')" mat-menu-item>
+          Asia
+        </button>
+        <button (click)="filterCountriesByRegion('Europe')" mat-menu-item>
+          Europe
+        </button>
+        <button (click)="filterCountriesByRegion('Oceania')" mat-menu-item>
+          Oceania
+        </button>
       </mat-menu>
     </form>
   </section>
   <section class="countries">
     @for (country of countriesFiltered(); track $index) {
     <div class="country">
-      <img src="{{ country.flags.png }}" alt="" />
+      <img
+        (click)="countryDetail(country.name.common)"
+        src="{{ country.flags.png }}"
+        alt=""
+      />
       <div class="information">
         <h3>{{ country.name.common }}</h3>
         <p>

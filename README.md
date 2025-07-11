@@ -1,15 +1,18 @@
 # Bia Challenge
 
 ## Descripción
+
 Este proyecto es una aplicación web desarrollada como parte del desafío técnico para Bia Energy. La aplicación es una dashboard interactiva que muestra información de países utilizando Angular como framework principal.
 
 ## Características
+
 - Dashboard dinámico de países
 - Interfaz moderna y responsive
 - Integración de componentes reutilizables
 - Estilos modernos con SCSS
 
 ## Requisitos Previos
+
 - Node.js (versión recomendada: 18.x o superior)
 - Angular CLI
 - Git
@@ -17,16 +20,19 @@ Este proyecto es una aplicación web desarrollada como parte del desafío técni
 ## Instalación
 
 1. Clona el repositorio:
+
 ```bash
 git clone https://github.com/damubo4/bia-challenge.git
 ```
 
 2. Navega al directorio del proyecto:
+
 ```bash
 cd bia-challenge
 ```
 
 3. Instala las dependencias:
+
 ```bash
 npm install
 ```
@@ -34,13 +40,21 @@ npm install
 ## Ejecución
 
 Para ejecutar la aplicación en modo desarrollo:
+
 ```bash
 ng serve
 ```
 
-La aplicación estará disponible en `http://localhost:4200`
+## Ejecución de pruebas unitarias
+
+Para ejecutar las pruebas unitarias se debe correr el siguiente comando:
+
+```bash
+ng test
+```
 
 ## Estructura del Proyecto
+
 ```
 src/
 ├── app/
@@ -73,6 +87,7 @@ src/
 ```
 
 ## Tecnologías Utilizadas
+
 - Angular
 - TypeScript
 - SCSS
@@ -80,4 +95,5 @@ src/
 - Git
 
 ## Licencia
+
 Este proyecto está bajo licencia MIT.
